@@ -1,7 +1,7 @@
 package com.example.labka11.service;
 
 import com.example.labka11.entity.Product;
-import com.example.labka11.repository.ProductRepository;
+import com.example.labka11.repository.MaratovaAruzhanProductRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -16,10 +16,10 @@ import static org.mockito.Mockito.*;
 class ProductServiceTest {
 
     @Mock
-    private ProductRepository repo;
+    private MaratovaAruzhanProductRepository repo;
 
     @InjectMocks
-    private ProductService productService;
+    private MaratovaAruzhanProductService productService;
 
     @Test
     void testCreateProduct() {

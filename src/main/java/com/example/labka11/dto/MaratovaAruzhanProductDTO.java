@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class ProductDTO {
+public class MaratovaAruzhanProductDTO {
     @NotBlank(message = "Имя не может быть пустым")
     private String name;
 

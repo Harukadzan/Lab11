@@ -1,6 +1,6 @@
 package com.example.labka11;
 
-import com.example.labka11.exception.NotFoundException;
+import com.example.labka11.exception.MaratovaAruzhanNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -15,8 +15,8 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 // допустим тут ловит еррор если у нас нет айдишки он вернет ошибку еррор с текстом из сервиса
-    @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<Map<String, String>> handle(NotFoundException e){
+    @ExceptionHandler(MaratovaAruzhanNotFoundException.class)
+    public ResponseEntity<Map<String, String>> handle(MaratovaAruzhanNotFoundException e){
         Map<String, String> error = new HashMap<>();
         error.put("error", e.getMessage());
         return ResponseEntity.status(404).body(error);

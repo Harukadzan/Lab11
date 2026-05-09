@@ -19,6 +19,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/shop_db
       SPRING_DATASOURCE_USERNAME: user
       SPRING_DATASOURCE_PASSWORD: password
+    volumes:
+        - uploads_data:/app/uploads
     depends_on:
       - db
     healthcheck:
@@ -29,3 +31,4 @@ services:
 
 volumes:
   postgres_data:
+  uploads_data:
