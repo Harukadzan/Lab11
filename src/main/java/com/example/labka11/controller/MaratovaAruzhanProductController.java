@@ -3,6 +3,7 @@ package com.example.labka11.controller;
 import com.example.labka11.dto.MaratovaAruzhanProductDTO;
 import com.example.labka11.entity.Product;
 import com.example.labka11.service.MaratovaAruzhanProductService;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -23,7 +24,7 @@ public class MaratovaAruzhanProductController {
         this.service = service;
     }
 
-    // замени старый getAll на этот:
+    @Operation(summary = "Получить все товары")  // ← добавь над @GetMapping// замени старый getAll на этот:
     @GetMapping
     public Page<Product> getAll(
             @RequestParam(required = false) String name,
